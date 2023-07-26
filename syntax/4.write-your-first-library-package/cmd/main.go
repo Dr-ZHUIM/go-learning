@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	zhuim "go-learning/4.write-your-first-library-package/zhuim"
+	"go-learning/syntax/4.write-your-first-library-package/zhuim"
 )
 
 func main() {
