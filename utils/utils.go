@@ -2,6 +2,7 @@ package utils
 
 import (
 	"fmt"
+	"runtime"
 )
 
 func PrintType(variable any, key string) {
@@ -15,4 +16,10 @@ func PrintTypeAndValue(variable any, key string) {
 }
 func PrintBlank() {
 	fmt.Println("------------------------------")
+}
+func PrintFuncName() {
+	pc := make([]uintptr, 1)
+	runtime.Callers(2, pc)
+	f := runtime.FuncForPC(pc[0])
+	fmt.Printf("func %s:\n\n", f.Name())
 }
